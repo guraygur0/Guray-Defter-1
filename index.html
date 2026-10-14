@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guray — Defter Nº 01</title>
+<meta name="description" content="Videolardaki etkileşimli sunum sayfaları: ikinci beyin (GurOS) ve bağlam penceresi.">
+<meta property="og:title" content="Guray — Defter Nº 01">
+<meta property="og:description" content="Videolardaki etkileşimli sunum sayfaları: ikinci beyin (GurOS) ve bağlam penceresi.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#eef1f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%93%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eef1f3; --sheet:#f7f8f9;
+  --ink:#16233b; --muted:#4d5d74; --faint:#7d8ba0;
+  --rule:rgba(22,35,59,.13); --rule-strong:rgba(22,35,59,.34);
+  --accent:#1d5bd6; --accent-2:#0e7c9a; --tint:rgba(29,91,214,.08);
+  --margin:rgba(200,71,47,.34); --ruled:rgba(29,91,214,.07); --tape:rgba(170,188,208,.55);
+  --shadow:0 1px 1px rgba(22,35,59,.06),0 14px 30px -20px rgba(22,35,59,.45);
+  --shadow-up:0 2px 2px rgba(22,35,59,.08),0 22px 40px -22px rgba(22,35,59,.55);
+  --f-display:"Instrument Serif","Iowan Old Style",Georgia,serif;
+  --f-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+  --f-hand:"Caveat","Segoe Print","Bradley Hand",cursive;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0b1a2e; --sheet:#10233c;
+    --ink:#e3ecf7; --muted:#a0b3c9; --faint:#6c829d;
+    --rule:rgba(170,200,235,.15); --rule-strong:rgba(170,200,235,.38);
+    --accent:#4b93ff; --accent-2:#8cc5ff; --tint:rgba(75,147,255,.1);
+    --margin:rgba(255,138,122,.22); --ruled:rgba(140,197,255,.05); --tape:rgba(150,180,215,.2);
+    --shadow:0 1px 1px rgba(0,0,0,.3),0 18px 36px -22px rgba(0,0,0,.8);
+    --shadow-up:0 2px 2px rgba(0,0,0,.35),0 26px 44px -22px rgba(0,0,0,.9);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0b1a2e; --sheet:#10233c;
+  --ink:#e3ecf7; --muted:#a0b3c9; --faint:#6c829d;
+  --rule:rgba(170,200,235,.15); --rule-strong:rgba(170,200,235,.38);
+  --accent:#4b93ff; --accent-2:#8cc5ff; --tint:rgba(75,147,255,.1);
+  --margin:rgba(255,138,122,.22); --ruled:rgba(140,197,255,.05); --tape:rgba(150,180,215,.2);
+  --shadow:0 1px 1px rgba(0,0,0,.3),0 18px 36px -22px rgba(0,0,0,.8);
+  --shadow-up:0 2px 2px rgba(0,0,0,.35),0 26px 44px -22px rgba(0,0,0,.9);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; min-height:100vh; color:var(--ink); font:16px/1.55 var(--f-body);
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(90deg, transparent 0 calc(var(--m) - 1px), var(--margin) calc(var(--m) - 1px) var(--m), transparent var(--m)),
+    repeating-linear-gradient(to bottom, transparent 0 31px, var(--ruled) 31px 32px);
+  --m:clamp(28px, 8vw, 96px);
+}
+main{max-width:980px; margin:0 auto; padding:clamp(40px,8vh,88px) 16px 56px calc(var(--m) + clamp(16px,4vw,48px))}
+.mark{display:flex; width:fit-content; max-width:100%; gap:12px; align-items:center; background:var(--sheet); border:1px solid var(--rule); box-shadow:var(--shadow);
+  padding:12px 16px 10px 12px; transform:rotate(-1.6deg); position:relative; margin-bottom:34px}
+.mark::before{content:""; position:absolute; top:-9px; left:50%; width:70px; height:18px; margin-left:-35px; background:var(--tape); transform:rotate(3deg)}
+.glyph{width:50px; height:50px; border-radius:50%; overflow:hidden; flex:none; border:1px solid var(--rule-strong)}
+.glyph img{width:100%; height:100%; object-fit:cover; display:block}
+.mark b{display:block; font:700 13px/1.2 var(--f-mono); letter-spacing:.14em; text-transform:uppercase}
+.mark span{display:block; font:500 11px/1.3 var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.cover{display:flex; width:fit-content; flex-direction:column; align-items:flex-start; gap:2px; padding:12px 26px 14px; border:3px double var(--ink); border-radius:16px; background:var(--sheet); box-shadow:var(--shadow); margin-bottom:22px}
+.cover small{font:500 11px/1.4 var(--f-mono); letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+.cover b{font:700 clamp(40px,7vw,58px)/.95 var(--f-hand); color:var(--accent)}
+h1{font:400 clamp(38px,6.4vw,64px)/1.02 var(--f-display); letter-spacing:-.01em; margin:0 0 14px; max-width:15ch}
+h1 em{color:var(--accent)}
+.lead{font-size:clamp(16px,2.1vw,18px); color:var(--muted); max-width:56ch; margin:0 0 40px}
+.pages{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr)); gap:clamp(26px,4vw,40px); margin:0 0 44px; padding:0; list-style:none}
+.page{position:relative; display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit; background:var(--sheet);
+  border:1px solid var(--rule); box-shadow:var(--shadow); padding:30px 26px 22px; transform:rotate(var(--r,0deg));
+  transition:transform .35s cubic-bezier(.3,1.4,.5,1), box-shadow .3s}
+.page::before{content:""; position:absolute; top:-10px; left:28px; width:76px; height:20px; background:var(--tape); transform:rotate(-4deg)}
+.page:hover,.page:focus-visible{transform:rotate(0deg) translateY(-4px); box-shadow:var(--shadow-up)}
+.page:focus-visible{outline:2px solid var(--accent); outline-offset:4px}
+.pages li:nth-child(1) .page{--r:-1.1deg}
+.pages li:nth-child(2) .page{--r:.9deg}
+.tag{display:flex; justify-content:space-between; gap:12px; font:500 11px/1.3 var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+.page h2{font:400 clamp(30px,4vw,38px)/1.05 var(--f-display); margin:4px 0 0}
+.page h2 small{display:block; font:600 22px/1.2 var(--f-hand); color:var(--accent-2); margin-top:4px}
+.page p{margin:0; color:var(--muted)}
+.quote{font:600 22px/1.25 var(--f-hand); color:var(--accent); border-left:2px solid var(--margin); padding-left:12px}
+.open{margin-top:auto; padding-top:10px; border-top:1px dashed var(--rule-strong); display:flex; align-items:center; justify-content:space-between; font:500 12px/1.3 var(--f-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--accent)}
+.open svg{width:22px; height:33px; flex:none; fill:none; stroke:var(--ink); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round}
+.open svg circle{fill:var(--sheet)}
+.page:hover .open .arm-r{transform:rotate(-70deg)}
+.open .arm-r{transform-origin:10px 11px; transition:transform .4s cubic-bezier(.3,1.4,.5,1)}
+.note{display:flex; flex-wrap:wrap; gap:10px 18px; align-items:baseline; font-size:15px; color:var(--muted); border-top:1px solid var(--rule); padding-top:20px}
+.note .hand{font:600 22px/1.2 var(--f-hand); color:var(--accent)}
+.note a{color:var(--accent); text-underline-offset:3px}
+footer{margin-top:36px; font:500 11px/1.4 var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--faint)}
+@media (prefers-reduced-motion: reduce){.page,.open .arm-r{transition:none}}
+@media (max-width:560px){ .mark{margin-bottom:26px} .page{padding:26px 20px 20px} }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark">
+    <span class="glyph"><img src="data:image/jpeg;base64,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" alt="Guray"></span>
+    <div><b>Güray / AI çalışma defteri</b><span>videolardaki sunum sayfaları</span></div>
+  </div>
+
+  <div class="cover"><small>Defter Nº 01</small><b>Guray</b></div>
+  <h1>Videoda anlattıklarım, <em>elinin altında.</em></h1>
+  <p class="lead">Videolarda ekranda gördüğün sayfalar. Her biri tek dosya; kaydır, tıkla, sürükle. Sahneler kendi kendine oynar, mekanizmaları sen çalıştırırsın.</p>
+
+  <ul class="pages">
+    <li>
+      <a class="page" href="second-brain/">
+        <span class="tag"><span>Dosya 01 · GurOS</span><span>~8 dk</span></span>
+        <h2>Second Brain<small>Güray'ın ikinci beyni</small></h2>
+        <p class="quote">Her yeni sohbet sıfırdan başlar. Benimki başlamıyor.</p>
+        <p>Obsidian vault'unun üstüne kurulan hafıza katmanı: açılış bağlamı, dört hafıza türü, kancalar, Recall, gizlilik kapısı ve gece vardiyası.</p>
+        <span class="open">Sayfayı aç
+          <svg viewBox="0 0 20 30" aria-hidden="true"><circle cx="10" cy="4.5" r="3.6"/><path d="M10 8.2v9.8"/><path d="M10 11l-5 5"/><path class="arm-r" d="M10 11l5 5"/><path d="M10 18l-4 9"/><path d="M10 18l4 9"/></svg>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="page" href="baglam-penceresi/">
+        <span class="tag"><span>Kısa not · Bağlam</span><span>5 adım</span></span>
+        <h2>Bağlam Penceresi<small>context window, tek sayfada</small></h2>
+        <p class="quote">Model yalnız masasındakini görür.</p>
+        <p>Masa dolunca ne olur, neden yeni konuya yeni sohbet açılır, kalıcı bilgi neden dosyada durur. Mesaj ekle, dosya ekle, özetle; masayı kendin doldur.</p>
+        <span class="open">Sayfayı aç
+          <svg viewBox="0 0 20 30" aria-hidden="true"><circle cx="10" cy="4.5" r="3.6"/><path d="M10 8.2v9.8"/><path d="M10 11l-5 5"/><path class="arm-r" d="M10 11l5 5"/><path d="M10 18l-4 9"/><path d="M10 18l4 9"/></svg>
+        </span>
+      </a>
+    </li>
+  </ul>
+
+  <p class="note"><span class="hand">Kendi vault'una kurmak ister misin?</span>
+    <span>GurOS'un herkesin kurabileceği sürümü: <a href="https://github.com/guraygur0/guros-ikinci-beyin">github.com/guraygur0/guros-ikinci-beyin</a></span></p>
+
+  <footer>Güray / AI çalışma defteri · Defter Nº 01 · 2026</footer>
+</main>
+</body>
+</html>
